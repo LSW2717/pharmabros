@@ -46,7 +46,7 @@
 		</data>
 		<key>Frameworks/App.framework/App</key>
 		<data>
-		rSS//2U736G7a3Bpv3Jw1sed97w=
+		xfUakoLrVE4GZg5AgStJ73WqfZk=
 		</data>
 		<key>Frameworks/App.framework/Info.plist</key>
 		<data>
@@ -54,23 +54,47 @@
 		</data>
 		<key>Frameworks/App.framework/_CodeSignature/CodeResources</key>
 		<data>
-		2nHiorJMLqwvAHOnGU97R9pU5aw=
+		RmD0hgAKVvusimZNXRzY1bCHGhs=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.bin</key>
 		<data>
-		6bEWjY9S9VykJjAfOQbq2l3XjBM=
+		r3a6yixOC5UR+gtEmwxWvNhVPlI=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
 		<data>
-		W7ge0MAfe8jHlGLRyEBf3tEMmgc=
+		legDhYDrSYH7dz1Ng261lkxSX2U=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/FontManifest.json</key>
 		<data>
-		vKJkVIcw+LGHFnKJGwrQwCREv68=
+		7YoGdpvOtLiTTHv/ob0zZI+Ik1o=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/NOTICES.Z</key>
 		<data>
 		0YepoZoHWYmGt0PtgV8Qeya+g3c=
+		</data>
+		<key>Frameworks/App.framework/flutter_assets/asset/fonts/NotoSansKR-Black.otf</key>
+		<data>
+		ARXMKvuXs89H9Zxvb1DlgLl1i8k=
+		</data>
+		<key>Frameworks/App.framework/flutter_assets/asset/fonts/NotoSansKR-Bold.otf</key>
+		<data>
+		SeUN4kRVjEwh9D2Ft0BMq7lwsws=
+		</data>
+		<key>Frameworks/App.framework/flutter_assets/asset/fonts/NotoSansKR-Light.otf</key>
+		<data>
+		A71b+8J/LSub3IhU5BdKMA6JoAc=
+		</data>
+		<key>Frameworks/App.framework/flutter_assets/asset/fonts/NotoSansKR-Medium.otf</key>
+		<data>
+		pM3FxJTRGOIxoy3amDc+eDWsndg=
+		</data>
+		<key>Frameworks/App.framework/flutter_assets/asset/fonts/NotoSansKR-Regular.otf</key>
+		<data>
+		X1M9DVyvOEevoteDAee4ezSF7Lw=
+		</data>
+		<key>Frameworks/App.framework/flutter_assets/asset/fonts/NotoSansKR-Thin.otf</key>
+		<data>
+		J0u736BwzA7B6kBPEQZB71emxiM=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/asset/svg/home-default.svg</key>
 		<data>
@@ -98,7 +122,7 @@
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/kernel_blob.bin</key>
 		<data>
-		nzdAawGnRnjoFFQnO9qknph0T7w=
+		qdYLDml8oqonoZgLeNtScXqM+rU=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
@@ -325,7 +349,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+XrbZRJ3Jtdlve28/Fga/2VOaXu54gyKl2hf5FAphDk=
+			yxSDK4+A9Wq75qE34yf9/bH8maLfa4r/tND2nYM06bs=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/Info.plist</key>
@@ -339,28 +363,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Lun12sNQzMrmHey2+/HPSAnOD2dqbrK5xsoRJJLlIRU=
+			WEn6pPbBigcHkDKSHH+sG3KN3FQ4kDemGomF8Bm+43s=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.bin</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			UDUJ/klyK+eRHh18ri9I5gAte8nEKVGf466ieic4dU4=
+			X3E6Bv5hqclbcejMldgnBo8E4pGGBf3JnZccvRVOt98=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			5uYXABoYlJsmDn3DNG+bjfI/URY9yN41hjRPcn51trY=
+			Mx6FAns3Nqu6ZhP3MlR8PM7WvlxEaZn4pqDVZHVDHV4=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/FontManifest.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zX4DZFvESy3Ue3y2JvUcTsv1Whl6t3JBYotHrBZfviE=
+			Rg2rSnl2cu85E/7aX3PM+8ywl4gLuZYBPxceJTdbpmA=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/NOTICES.Z</key>
@@ -368,6 +392,48 @@
 			<key>hash2</key>
 			<data>
 			uixNhJJXh0Z+7nvVhOs8/x7Wjh+1zBEuhC59cHQEzos=
+			</data>
+		</dict>
+		<key>Frameworks/App.framework/flutter_assets/asset/fonts/NotoSansKR-Black.otf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			yLgXdlgGfvKo6Am7QLUOLCBrhoVS1cohOvLjeSca1No=
+			</data>
+		</dict>
+		<key>Frameworks/App.framework/flutter_assets/asset/fonts/NotoSansKR-Bold.otf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			574c2xaTRKdb3wn4Vj3PXmYhlL4wZIc7a0ylfgugd08=
+			</data>
+		</dict>
+		<key>Frameworks/App.framework/flutter_assets/asset/fonts/NotoSansKR-Light.otf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			PCPcX60gLczdi6FIF0CU2zRE969fafLiT1upinIdORU=
+			</data>
+		</dict>
+		<key>Frameworks/App.framework/flutter_assets/asset/fonts/NotoSansKR-Medium.otf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			JWuwa5HZdN28DjwGPIVSLNphh8xjjwxq5ddS76Y/4JM=
+			</data>
+		</dict>
+		<key>Frameworks/App.framework/flutter_assets/asset/fonts/NotoSansKR-Regular.otf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			KURZSOQyE34N4QTew4npVtcmM6oOTLBMpXK7jjeOPTU=
+			</data>
+		</dict>
+		<key>Frameworks/App.framework/flutter_assets/asset/fonts/NotoSansKR-Thin.otf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			BFuAJqCkI+/FyF5txWubJwXzTrvEPotdBmTdHIYUz5A=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/asset/svg/home-default.svg</key>
@@ -416,7 +482,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			EKBo2+pLX+qYVYwtXrKPJ7K5Lu80y0npxNEQa/P7Wt4=
+			uNBoy3qcEergLlZtctbrlrH2mwcidjBSIggvJzBJyNQ=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>

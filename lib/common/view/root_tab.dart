@@ -7,6 +7,8 @@ import 'package:pharmabros/common/view_model/root_tab_view_model.dart';
 import 'package:pharmabros/home/view/home_view.dart';
 import 'package:pharmabros/mypage/view/mypage_view.dart';
 
+import '../const/color.dart';
+
 class RootTab extends ConsumerWidget {
   const RootTab({super.key});
 
@@ -16,19 +18,35 @@ class RootTab extends ConsumerWidget {
 
     return Layout(
         title: _getTitleFromTabIndex(currentIndex),
-        bottomNavigationBar: Theme(
-          data: Theme.of(context).copyWith(
-            splashColor: Colors.transparent,
-            highlightColor: Colors.transparent,
+        bottomNavigationBar: Container(
+          decoration: const BoxDecoration(
+            border: Border(
+              top: BorderSide(
+                color: diverColor,
+                width: 1.0,
+              )
+            ),
           ),
           child: BottomNavigationBar(
-            elevation: 0,
             selectedFontSize: 12.sp,
             unselectedFontSize: 12.sp,
+            selectedLabelStyle: const TextStyle(
+              color: textColor2,
+              fontFamily: 'NotoSans',
+              fontWeight: FontWeight.w400,
+            ),
+            unselectedLabelStyle: const TextStyle(
+              color: textColor3,
+              fontFamily: 'NotoSans',
+              fontWeight: FontWeight.w400,
+            ),
+            selectedItemColor: textColor2,
+            unselectedItemColor: textColor3,
             type: BottomNavigationBarType.fixed,
             onTap: (index){
               ref.read(tabIndexProvider.notifier).setIndex(index);
             },
+            currentIndex: currentIndex,
             items: [
               BottomNavigationBarItem(
                 icon: SvgPicture.asset(
@@ -70,7 +88,7 @@ class RootTab extends ConsumerWidget {
   String? _getTitleFromTabIndex(int index) {
     switch (index) {
       case 0:
-        return '홈';
+        return null;
       case 1:
         return '내 정보';
       default:
