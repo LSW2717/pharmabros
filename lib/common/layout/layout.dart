@@ -41,6 +41,7 @@ class Layout extends HookConsumerWidget {
       BuildContext context, TextEditingController controller) {
     return AppBar(
       backgroundColor: Colors.white,
+      scrolledUnderElevation: 0,
       toolbarHeight: 54.w,
       title: title == null
           ? SizedBox(

@@ -24,7 +24,7 @@ class App extends ConsumerWidget {
           textScaler: const TextScaler.linear(1.0),
         ),
         child: ScreenUtilInit(
-          designSize: const Size(375, 812),
+          designSize: const Size(360, 812),
           child: child,
         ),
       ),

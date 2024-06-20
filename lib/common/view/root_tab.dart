@@ -17,74 +17,75 @@ class RootTab extends ConsumerWidget {
     final currentIndex = ref.watch(tabIndexProvider);
 
     return Layout(
-        title: _getTitleFromTabIndex(currentIndex),
-        bottomNavigationBar: Container(
-          decoration: const BoxDecoration(
-            border: Border(
+      title: _getTitleFromTabIndex(currentIndex),
+      bottomNavigationBar: Container(
+        decoration: const BoxDecoration(
+          border: Border(
               top: BorderSide(
-                color: diverColor,
-                width: 1.0,
-              )
-            ),
-          ),
-          child: BottomNavigationBar(
-            selectedFontSize: 12.sp,
-            unselectedFontSize: 12.sp,
-            selectedLabelStyle: const TextStyle(
-              color: textColor2,
-              fontFamily: 'NotoSans',
-              fontWeight: FontWeight.w400,
-            ),
-            unselectedLabelStyle: const TextStyle(
-              color: textColor3,
-              fontFamily: 'NotoSans',
-              fontWeight: FontWeight.w400,
-            ),
-            selectedItemColor: textColor2,
-            unselectedItemColor: textColor3,
-            type: BottomNavigationBarType.fixed,
-            onTap: (index){
-              ref.read(tabIndexProvider.notifier).setIndex(index);
-            },
-            currentIndex: currentIndex,
-            items: [
-              BottomNavigationBarItem(
-                icon: SvgPicture.asset(
-                  "asset/svg/home-default.svg",
-                  width: 24.w,
-                  height: 24.w,
-                ),
-                activeIcon: SvgPicture.asset(
-                  "asset/svg/home-selected.svg",
-                  width: 24.w,
-                  height: 24.w,
-                ),
-                label: '홈',
-              ),
-              BottomNavigationBarItem(
-                icon: SvgPicture.asset(
-                  "asset/svg/my-default.svg",
-                  width: 24.w,
-                  height: 24.w,
-                ),
-                activeIcon: SvgPicture.asset(
-                  "asset/svg/my-selected.svg",
-                  width: 24.w,
-                  height: 24.w,
-                ),
-                label: '내 정보',
-              ),
-            ],
-          ),
+            color: diverColor,
+            width: 1.0,
+          )),
         ),
-        child: IndexedStack(
-          index: currentIndex,
-          children: const [
-            HomeView(),
-            MyPageView(),
+        child: BottomNavigationBar(
+          selectedFontSize: 12.sp,
+          unselectedFontSize: 12.sp,
+          selectedLabelStyle: const TextStyle(
+            color: textColor2,
+            fontFamily: 'NotoSans',
+            fontWeight: FontWeight.w400,
+          ),
+          unselectedLabelStyle: const TextStyle(
+            color: textColor3,
+            fontFamily: 'NotoSans',
+            fontWeight: FontWeight.w400,
+          ),
+          selectedItemColor: textColor2,
+          unselectedItemColor: textColor3,
+          type: BottomNavigationBarType.fixed,
+          onTap: (index) {
+            ref.read(tabIndexProvider.notifier).setIndex(index);
+          },
+          currentIndex: currentIndex,
+          items: [
+            BottomNavigationBarItem(
+              icon: SvgPicture.asset(
+                "asset/svg/home-default.svg",
+                width: 24.w,
+                height: 24.w,
+              ),
+              activeIcon: SvgPicture.asset(
+                "asset/svg/home-selected.svg",
+                width: 24.w,
+                height: 24.w,
+              ),
+              label: '홈',
+            ),
+            BottomNavigationBarItem(
+              icon: SvgPicture.asset(
+                "asset/svg/my-default.svg",
+                width: 24.w,
+                height: 24.w,
+              ),
+              activeIcon: SvgPicture.asset(
+                "asset/svg/my-selected.svg",
+                width: 24.w,
+                height: 24.w,
+              ),
+              label: '내 정보',
+            ),
           ],
-        ));
+        ),
+      ),
+      child: IndexedStack(
+        index: currentIndex,
+        children: const [
+          HomeView(),
+          MyPageView(),
+        ],
+      ),
+    );
   }
+
   String? _getTitleFromTabIndex(int index) {
     switch (index) {
       case 0:

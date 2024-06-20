@@ -1,0 +1,54 @@
+# macOS
+.DS_Store
+
+# IntelliJ / Android Studio
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Visual Studio Code
+.vscode/
+
+# Flutter/Dart specific
+**/ios/Flutter/.last_build_id
+**/ios/Flutter/App.framework
+**/ios/Flutter/Flutter.framework
+**/ios/Flutter/flutter_export_environment.sh
+**/ios/Pods/
+**/ios/.symlinks/
+**/ios/Generated.xcconfig
+**/ios/.generated/
+**/ios/Runner.xcworkspace/
+
+**/android/.gradle/
+**/android/captures/
+**/android/gradle/
+**/android/gradlew
+**/android/gradlew.bat
+**/android/local.properties
+**/android/Flutter/build/
+**/android/.idea/
+**/android/.cxx/
+
+**/build/
+**/ios/Flutter/App.framework/
+**/ios/Flutter/Flutter.framework/
+**/ios/Flutter/flutter_export_environment.sh
+**/ios/Pods/
+**/ios/.symlinks/
+**/ios/Generated.xcconfig
+**/ios/.generated/
+**/ios/Runner.xcworkspace/
+
+# Flutter desktop
+**/macos/Flutter/Flutter.xcframework/
+**/macos/Flutter/FlutterMacOS.framework/
+**/macos/Flutter/flutter_export_environment.sh
+**/macos/Flutter/flutter_assets/
+
+**/linux/Flutter/flutter_export_environment.sh
+**/linux/Flutter/flutter_assets/
+
+**/windows/Flutter/flutter_export_environment.bat
+**/windows/Flutter/flutter_assets/
