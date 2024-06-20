@@ -15,16 +15,15 @@ final routerProvider = Provider<GoRouter>((ref) {
   }
 
   return GoRouter(
-    initialLocation: '/splash',
     routes: [
       GoRoute(
         path: '/',
         pageBuilder: (context, state) => platformPage(const RootTab(), '/'),
         routes: [
-          GoRoute(
-            path: 'detail',
-            // pageBuilder: (context, state) => platformPage(),
-          ),
+          // GoRoute(
+          //   path: 'detail',
+          //   pageBuilder: (context, state) => platformPage(),
+          // ),
         ],
       ),
     ],

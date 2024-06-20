@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:pharmabros/common/router/router.dart';
 
 void main() async {
 
@@ -16,6 +17,7 @@ class App extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final router = ref.watch(routerProvider);
     return MaterialApp.router(
       builder: (context, child) => MediaQuery(
         data: MediaQuery.of(context).copyWith(
@@ -27,7 +29,7 @@ class App extends ConsumerWidget {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      // routerConfig: router,
+      routerConfig: router,
       theme: ThemeData(
         canvasColor: Colors.white,
       ),
