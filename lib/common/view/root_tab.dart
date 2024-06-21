@@ -22,7 +22,7 @@ class RootTab extends ConsumerWidget {
         decoration: const BoxDecoration(
           border: Border(
               top: BorderSide(
-            color: diverColor,
+            color: diverColor1,
             width: 1.0,
           )),
         ),

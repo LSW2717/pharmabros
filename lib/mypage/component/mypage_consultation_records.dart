@@ -39,7 +39,7 @@ class MyPageConsultationRecords extends StatelessWidget {
               Ink(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  color: mainColor,
+                  color: mainColor1,
                 ),
                 child: InkWell(
                   borderRadius: BorderRadius.circular(20),
@@ -59,7 +59,7 @@ class MyPageConsultationRecords extends StatelessWidget {
               Ink(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  color: mainColor,
+                  color: mainColor1,
                 ),
                 child: InkWell(
                   borderRadius: BorderRadius.circular(20),

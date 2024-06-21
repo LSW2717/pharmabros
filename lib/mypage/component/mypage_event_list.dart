@@ -27,7 +27,7 @@ class MyPageEventList extends StatelessWidget {
           Ink(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(12),
-              color: mainColor,
+              color: mainColor1,
             ),
             child: InkWell(
               onTap: (){},

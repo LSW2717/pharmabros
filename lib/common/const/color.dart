@@ -9,6 +9,9 @@ const textColor2 = Color(0xFF202022);
 const textColor3 = Color(0xFFB3B5BB);
 const textColor4 = Color(0xFF808288);
 
-const diverColor = Color(0xFFECECEE);
+const diverColor1 = Color(0xFFECECEE);
+const diverColor2 = Color(0xFFD9DADD);
 
-const mainColor = Color(0xFFF4F4F5);
+const mainColor1 = Color(0xFFF4F4F5);
+const mainColor2 = Color(0xFFFFE0E6);
+const mainColor3 = Color(0xFFFF6683);

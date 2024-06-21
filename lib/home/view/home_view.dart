@@ -19,7 +19,7 @@ class HomeView extends StatelessWidget {
               border: Border(
                 bottom: BorderSide(
                   width: 1.0,
-                  color: diverColor,
+                  color: diverColor1,
                 ),
               ),
             ),

@@ -26,19 +26,19 @@ ProductDetail _$ProductDetailFromJson(Map<String, dynamic> json) =>
       productSalesUrl: json['product_sales_url'] as String,
       perDailyIntakeCountText: json['per_daily_intake_count_text'] as String,
       perTimesIntakeAmountText: json['per_times_intake_amount_text'] as String,
-      intakeMethod: (json['intakeMethod'] as List<dynamic>)
+      intakeMethod: (json['intake_method'] as List<dynamic>)
           .map((e) => InTakeMethod.fromJson(e as Map<String, dynamic>))
           .toList(),
       perDailyIntakeIngredientContent:
-          (json['perDailyIntakeIngredientContent'] as List<dynamic>)
+          (json['per_daily_intake_ingredient_content'] as List<dynamic>)
               .map((e) => PerDailyIntakeIngredientContent.fromJson(
                   e as Map<String, dynamic>))
               .toList(),
       ingredientsContent: json['ingredients_content'] as String,
-      nutritionInformation: (json['nutritionInformation'] as List<dynamic>)
-          .map((e) => e as String)
+      nutritionInformation: (json['nutrition_information'] as List<dynamic>)
+          .map((e) => NutritionInformation.fromJson(e as Map<String, dynamic>))
           .toList(),
-      productFeatures: (json['productFeatures'] as List<dynamic>)
+      productFeatures: (json['product_features'] as List<dynamic>)
           .map((e) => e as String)
           .toList(),
     );
@@ -63,10 +63,10 @@ Map<String, dynamic> _$ProductDetailToJson(ProductDetail instance) =>
       'product_sales_url': instance.productSalesUrl,
       'per_daily_intake_count_text': instance.perDailyIntakeCountText,
       'per_times_intake_amount_text': instance.perTimesIntakeAmountText,
-      'intakeMethod': instance.intakeMethod,
-      'perDailyIntakeIngredientContent':
+      'intake_method': instance.intakeMethod,
+      'per_daily_intake_ingredient_content':
           instance.perDailyIntakeIngredientContent,
       'ingredients_content': instance.ingredientsContent,
-      'nutritionInformation': instance.nutritionInformation,
-      'productFeatures': instance.productFeatures,
+      'nutrition_information': instance.nutritionInformation,
+      'product_features': instance.productFeatures,
     };

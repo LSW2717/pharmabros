@@ -5,7 +5,7 @@ import 'package:pharmabros/common/const/color.dart';
 import 'package:pharmabros/common/const/typography.dart';
 import 'package:pharmabros/mypage/component/mypage_alarm_setting.dart';
 import 'package:pharmabros/mypage/component/mypage_consultation_records.dart';
-import 'package:pharmabros/mypage/component/mypage_diver.dart';
+import 'package:pharmabros/common/component/custom_diver.dart';
 import 'package:pharmabros/mypage/component/mypage_event_list.dart';
 import 'package:pharmabros/mypage/component/mypage_user_info.dart';
 import 'package:url_launcher/url_launcher_string.dart';
@@ -20,13 +20,13 @@ class MyPageView extends StatelessWidget {
       child: Column(
         children: [
           const MyPageUserInfo(),
-          const MyPageDiver(),
+          const CustomDiver(),
           const MyPageConsultationRecords(),
-          const MyPageDiver(),
+          const CustomDiver(),
           const MyPageAlarmSetting(),
-          const MyPageDiver(),
+          const CustomDiver(),
           const MyPageEventList(),
-          const MyPageDiver(),
+          const CustomDiver(),
           Container(
             width: MediaQuery.of(context).size.width,
             height: 216.w,
@@ -79,7 +79,7 @@ class MyPageView extends StatelessWidget {
           Container(
             width: MediaQuery.of(context).size.width,
             height: 95.w,
-            color: mainColor,
+            color: mainColor1,
             padding: EdgeInsets.symmetric(vertical: 24.w, horizontal: 16.w),
             child: Column(
               children: [

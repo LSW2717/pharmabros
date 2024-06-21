@@ -1,4 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
+import 'package:pharmabros/detail/model/nutrition_information_model.dart';
 import 'package:pharmabros/detail/model/per_daily_intake_ingredient_content_model.dart';
 
 import 'in_take_method_model.dart';
@@ -42,11 +43,15 @@ class ProductDetail {
   final String perDailyIntakeCountText;
   @JsonKey(name: 'per_times_intake_amount_text')
   final String perTimesIntakeAmountText;
+  @JsonKey(name: 'intake_method')
   final List<InTakeMethod> intakeMethod;
+  @JsonKey(name: 'per_daily_intake_ingredient_content')
   final List<PerDailyIntakeIngredientContent> perDailyIntakeIngredientContent;
   @JsonKey(name: 'ingredients_content')
   final String ingredientsContent;
-  final List<String> nutritionInformation;
+  @JsonKey(name: 'nutrition_information')
+  final List<NutritionInformation> nutritionInformation;
+  @JsonKey(name: 'product_features')
   final List<String> productFeatures;
   ProductDetail({
     required this.id,

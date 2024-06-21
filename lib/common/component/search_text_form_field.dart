@@ -52,18 +52,18 @@ class _SearchTextFormFieldState extends State<SearchTextFormField> {
           padding: EdgeInsets.zero,
         ),
         filled: true,
-        fillColor: mainColor,
+        fillColor: mainColor1,
         enabledBorder: OutlineInputBorder(
-          borderSide: const BorderSide(color: mainColor),
+          borderSide: const BorderSide(color: mainColor1),
           borderRadius: BorderRadius.circular(borderRadius),
         ),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(borderRadius),
-          borderSide: const BorderSide(color: mainColor),
+          borderSide: const BorderSide(color: mainColor1),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(borderRadius),
-          borderSide: const BorderSide(color: mainColor),
+          borderSide: const BorderSide(color: mainColor1),
         ),
       ),
       maxLines: 1,

@@ -17,6 +17,13 @@ var headerText3 = TextStyle(
     fontSize: 16.sp,
     letterSpacing: -0.3.sp,
 );
+var headerText4 = TextStyle(
+  color: Colors.black,
+  fontFamily: 'NotoSans',
+  fontWeight: FontWeight.w700,
+  fontSize: 14.sp,
+  letterSpacing: -0.3.sp,
+);
 var bodyText1 = TextStyle(
   color: Colors.black,
   fontFamily: 'NotoSans',
