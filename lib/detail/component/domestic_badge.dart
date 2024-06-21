@@ -24,7 +24,7 @@ class DomesticBadge extends StatelessWidget {
       child: Center(
         child: Text(
           isDomestic ? '국내' : '해외',
-          style: bodyText3.copyWith(color: buttonColor1),
+          style: bodyText3.copyWith(color: isDomestic ? buttonColor1 : buttonColor2),
         ),
       ),
     );

@@ -6,8 +6,10 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pharmabros/common/component/search_text_form_field.dart';
 import 'package:pharmabros/common/const/color.dart';
 import 'package:pharmabros/common/const/typography.dart';
+import 'package:pharmabros/home/view_model/home_api_view_model.dart';
+import 'package:pharmabros/home/view_model/home_search_text_view_model.dart';
 
-class Layout extends HookConsumerWidget {
+class Layout extends ConsumerWidget {
   final Color? backgroundColor;
   final Widget child;
   final String? title;
@@ -29,18 +31,17 @@ class Layout extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final _textController = useTextEditingController();
     return Scaffold(
       resizeToAvoidBottomInset: resizeToAvoidBottomInset,
       backgroundColor: Colors.white,
-      appBar: defaultAppBar(context, _textController),
+      appBar: defaultAppBar(context,ref),
       body: child,
       bottomNavigationBar: bottomNavigationBar,
     );
   }
 
   AppBar? defaultAppBar(
-      BuildContext context, TextEditingController controller) {
+      BuildContext context, WidgetRef ref) {
     return AppBar(
       backgroundColor: Colors.white,
       scrolledUnderElevation: 0,
@@ -67,15 +68,27 @@ class Layout extends HookConsumerWidget {
           ? SizedBox(
               height: 38.w,
               child: SearchTextFormField(
-                  controller: controller, onSubmitted: (text) {}))
-          : centerTitle == true ? Text(title!, style: headerText3,) : Row(
-              children: [
-                Text(
+                onSubmitted: (text) {
+                  ref
+                      .read(searchTextProvider.notifier)
+                      .state = text;
+                  ref.read(homeApiProvider.notifier).search(text);
+                },
+              ),
+            )
+          : centerTitle == true
+              ? Text(
                   title!,
                   style: headerText3,
+                )
+              : Row(
+                  children: [
+                    Text(
+                      title!,
+                      style: headerText3,
+                    ),
+                  ],
                 ),
-              ],
-            ),
       bottom: PreferredSize(
         preferredSize: const Size.fromHeight(1.0),
         child: Container(

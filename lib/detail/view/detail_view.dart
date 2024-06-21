@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -96,13 +97,28 @@ class DetailView extends ConsumerWidget {
                           style: headerText2,
                         ),
                         WidgetSpan(
-                          child: Padding(
-                            padding: EdgeInsets.only(left: 4.w),
-                            child: SvgPicture.asset(
-                              'asset/svg/copy.svg',
-                              height: 20.w,
-                              width: 20.w,
-                              color: textColor1,
+                          child: GestureDetector(
+                            onTap: () {
+                              final String textToCopy = detailData.productName;
+                              Clipboard.setData(ClipboardData(text: textToCopy));
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(
+                                  content: Text(
+                                    '복사되었습니다.',
+                                    style: bodyText2.copyWith(color: Colors.white),
+                                  ),
+                                  duration: const Duration(seconds: 2),
+                                ),
+                              );
+                            },
+                            child: Padding(
+                              padding: EdgeInsets.only(left: 4.w),
+                              child: SvgPicture.asset(
+                                'asset/svg/copy.svg',
+                                height: 20.w,
+                                width: 20.w,
+                                color: textColor1,
+                              ),
                             ),
                           ),
                         ),
@@ -231,20 +247,24 @@ class DetailView extends ConsumerWidget {
                     ),
                   ],
                 ),
-                const CustomDiver(),
-                detailData.productFeatures.isEmpty ? const SizedBox.shrink() : Container(
-                  padding:
-                      EdgeInsets.symmetric(vertical: 16.w, horizontal: 16.w),
-                  child: Column(
-                    children: [
-                      SizedBox(height: 8.w),
-                      const PillTitle(title: '제품 특징'),
-                      SizedBox(height: 8.w),
-                      ...detailData.productFeatures.map((data){
-                        return ProductFeaturesCard(productFeature: data,);
-                      }).toList(),
-                    ],
-                  ),
+                detailData.productFeatures.isEmpty ? const SizedBox.shrink() : Column(
+                  children: [
+                    const CustomDiver(),
+                    Container(
+                      padding:
+                          EdgeInsets.symmetric(vertical: 16.w, horizontal: 16.w),
+                      child: Column(
+                        children: [
+                          SizedBox(height: 8.w),
+                          const PillTitle(title: '제품 특징'),
+                          SizedBox(height: 8.w),
+                          ...detailData.productFeatures.map((data){
+                            return ProductFeaturesCard(productFeature: data,);
+                          }).toList(),
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),

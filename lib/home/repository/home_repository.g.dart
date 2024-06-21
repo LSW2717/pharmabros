@@ -19,7 +19,7 @@ class _HomeRepository implements HomeRepository {
   String? baseUrl;
 
   @override
-  Future<ResponseModel<dynamic>> getSearchList(
+  Future<ResponseModel<LoadedHomeState>> getSearchList(
     String targetWord,
     int page,
     int size,
@@ -33,7 +33,7 @@ class _HomeRepository implements HomeRepository {
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ResponseModel<dynamic>>(Options(
+        _setStreamType<ResponseModel<LoadedHomeState>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -49,9 +49,9 @@ class _HomeRepository implements HomeRepository {
               _dio.options.baseUrl,
               baseUrl,
             ))));
-    final value = ResponseModel<dynamic>.fromJson(
+    final value = ResponseModel<LoadedHomeState>.fromJson(
       _result.data!,
-      (json) => json as dynamic,
+      (json) => LoadedHomeState.fromJson(json as Map<String, dynamic>),
     );
     return value;
   }
