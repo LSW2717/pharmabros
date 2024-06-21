@@ -59,7 +59,7 @@ class DetailView extends ConsumerWidget {
                   BoxShadow(
                     color: Color(0x33000000),
                     blurRadius: 25,
-                    offset: Offset(0, 7),
+                    offset: Offset(0, 2),
                     spreadRadius: 0,
                   )
                 ],
