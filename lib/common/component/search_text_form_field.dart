@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pharmabros/common/const/color.dart';
 
 class SearchTextFormField extends StatefulWidget {
   final void Function(String) onSubmitted;
+
   const SearchTextFormField({
     required this.onSubmitted,
     super.key,
@@ -41,17 +43,20 @@ class _SearchTextFormFieldState extends State<SearchTextFormField> {
       onFieldSubmitted: widget.onSubmitted,
       decoration: InputDecoration(
         contentPadding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 8.w),
-        suffixIcon: IconButton(
-          onPressed: (){
+        suffixIcon: InkWell(
+          borderRadius: BorderRadius.circular(100),
+          onTap: () {
             controller.clear();
           },
-          icon: Icon(
-            Icons.close,
-            color: Colors.black,
-            size: 13.33.w,
+          child: Padding(
+            padding: EdgeInsets.only(top: 12.w, bottom: 12.w, left: 12.w),
+            child: SvgPicture.asset(
+              'asset/svg/x.svg',
+              color: buttonColor3,
+            ),
           ),
-          padding: EdgeInsets.zero,
         ),
+        suffixIconColor: mainColor1,
         filled: true,
         fillColor: mainColor1,
         enabledBorder: OutlineInputBorder(

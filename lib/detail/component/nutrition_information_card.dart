@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pharmabros/detail/model/nutrition_information_model.dart';
 
+import '../../common/component/half_backbround_text_painter.dart';
 import '../../common/const/color.dart';
 import '../../common/const/typography.dart';
 
@@ -25,16 +26,12 @@ class NutritionInformationCard extends StatelessWidget {
       ),
       child: Column(
         children: [
-          Stack(
-            children: [
-              Positioned.fill(
-                child: Container(
-                  height: 10.w,
-                  color: mainColor2,
-                ),
-              ),
-              Text(nutritionInformation.nutritionName, style: headerText3),
-            ],
+          CustomPaint(
+            painter: HalfBackgroundTextPainter( nutritionInformation.nutritionName, mainColor2, Colors.transparent),
+            child: Text(
+              nutritionInformation.nutritionName,
+              style: headerText3,
+            ),
           ),
           SizedBox(height: 8.w),
           Text(

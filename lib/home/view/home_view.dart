@@ -19,7 +19,7 @@ class HomeView extends ConsumerWidget {
       return const Center(child: CircularProgressIndicator(color: mainColor2,),);
     }
     if (homeState is ErrorHomeState){
-      return Center(child: Text(homeState.errorMessage),);
+      return const HomeEmptyView();
     }
     if (homeState is LoadedHomeState){
       final homeData = homeState.productList;
