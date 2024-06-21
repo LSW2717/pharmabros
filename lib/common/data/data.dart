@@ -1,0 +1,1 @@
+const ip = 'api.friendly-pharmacist.com';

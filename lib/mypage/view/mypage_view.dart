@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 import 'package:pharmabros/common/const/color.dart';
 import 'package:pharmabros/common/const/typography.dart';
 import 'package:pharmabros/mypage/component/mypage_alarm_setting.dart';
@@ -126,9 +127,44 @@ class MyPageView extends StatelessWidget {
                   ],
                 ),
                 SizedBox(height: 8.w),
-                Text(
-                  '버전 정보 v0.0.0',
-                  style: bodyText3.copyWith(color: textColor4),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      '버전 정보 ',
+                      style: bodyText3.copyWith(color: textColor4),
+                    ),
+                    SizedBox(
+                      child: FutureBuilder<PackageInfo>(
+                        future: PackageInfo.fromPlatform(),
+                        builder: (BuildContext context,
+                            AsyncSnapshot<PackageInfo> snapshot) {
+                          if (snapshot.connectionState == ConnectionState.waiting) {
+                            return Text(
+                              'v0.0.0',
+                              style: bodyText3.copyWith(color: textColor4),
+                            );
+                          } else if (snapshot.hasError) {
+                            return Text(
+                              'v0.0.0',
+                              style: bodyText3.copyWith(color: textColor4),
+                            );
+                          } else if (snapshot.hasData) {
+                            final data = snapshot.data!;
+                            return Text(
+                              'v${data.version}',
+                              style: bodyText3.copyWith(color: textColor4),
+                            );
+                          } else {
+                            return Text(
+                              'v0.0.0',
+                              style: bodyText3.copyWith(color: textColor4),
+                            );
+                          }
+                        },
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),

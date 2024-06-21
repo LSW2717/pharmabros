@@ -25,7 +25,7 @@ class MyPageUserInfo extends StatelessWidget {
                   height: 24.w,
                   child: Text(
                     '이시원',
-                    style: headerText1,
+                    style: headerText3,
                   ),
                 ),
                 SizedBox(

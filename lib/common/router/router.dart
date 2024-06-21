@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:pharmabros/detail/view/detail_view.dart';
 
 import '../view/root_tab.dart';
 
@@ -20,10 +21,10 @@ final routerProvider = Provider<GoRouter>((ref) {
         path: '/',
         pageBuilder: (context, state) => platformPage(const RootTab(), '/'),
         routes: [
-          // GoRoute(
-          //   path: 'detail',
-          //   pageBuilder: (context, state) => platformPage(),
-          // ),
+          GoRoute(
+            path: 'detail',
+            pageBuilder: (context, state) => platformPage(const DetailView(), 'detail'),
+          ),
         ],
       ),
     ],

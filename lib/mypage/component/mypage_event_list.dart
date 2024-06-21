@@ -22,7 +22,7 @@ class MyPageEventList extends StatelessWidget {
               height: 24.w,
               child: Text(
                 '나의 참여',
-                style: headerText1,
+                style: headerText3,
               )),
           Ink(
             decoration: BoxDecoration(

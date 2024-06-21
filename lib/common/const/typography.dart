@@ -3,7 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 
-var headerText1 = TextStyle(
+var headerText2 = TextStyle(
+  color: Colors.black,
+  fontFamily: 'NotoSans',
+  fontWeight: FontWeight.w700,
+  fontSize: 20.sp,
+  letterSpacing: -0.3.sp,
+);
+var headerText3 = TextStyle(
     color: Colors.black,
     fontFamily: 'NotoSans',
     fontWeight: FontWeight.w700,
