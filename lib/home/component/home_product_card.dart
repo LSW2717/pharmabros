@@ -1,17 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
+import 'package:pharmabros/detail/view_model/product_detail_api_view_model.dart';
 
 import '../../common/const/color.dart';
 import '../../common/const/typography.dart';
 
-class HomeProductCard extends StatelessWidget {
+class HomeProductCard extends ConsumerWidget {
   const HomeProductCard({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return GestureDetector(
       onTap: (){
+        ref.read(productDetailApiProvider.notifier).getProductDetail(25717);
         context.go('/detail');
       },
       child: Container(
