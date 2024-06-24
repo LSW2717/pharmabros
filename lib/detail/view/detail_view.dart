@@ -45,7 +45,7 @@ class DetailView extends ConsumerWidget {
           SliverToBoxAdapter(
             child: Container(
               width: MediaQuery.of(context).size.width,
-              height: 382.w,
+              // height: 382.w,
               padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 32.w),
               decoration: const ShapeDecoration(
                 color: Colors.white,
