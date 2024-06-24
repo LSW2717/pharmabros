@@ -82,7 +82,7 @@ class HomeApiViewModel extends StateNotifier<HomeState> {
   }
 
   void _onScroll() {
-    if (controller.position.pixels + 200 >= controller.position.maxScrollExtent &&
+    if (controller.position.pixels + 400 >= controller.position.maxScrollExtent &&
         hasMore &&
         !isLoading) {
       _fetchThrottle();
